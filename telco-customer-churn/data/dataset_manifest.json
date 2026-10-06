@@ -1,0 +1,9 @@
+{
+  "source": "Kaggle",
+  "dataset_handle": "blastchar/telco-customer-churn",
+  "source_url": "https://www.kaggle.com/datasets/blastchar/telco-customer-churn",
+  "file_name": "WA_Fn-UseC_-Telco-Customer-Churn.csv",
+  "sha256": "88be4b93fbe0cc83421af1c503794c97c342eca914c1576db7c276e61d61358a",
+  "rows": 7043,
+  "columns": 21
+}

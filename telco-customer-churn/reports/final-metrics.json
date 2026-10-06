@@ -1,0 +1,23 @@
+{
+  "threshold": 0.409,
+  "frozen_at": "2026-09-28T16:08:50+02:00",
+  "recipe_sha256": "e26cc09c15f9af99a488c4929337433bee84b5dbd6c4fe1246354685209c52af",
+  "original_test_previously_viewed": true,
+  "train_count": 5634,
+  "test_count": 1409,
+  "class_order": [
+    "No",
+    "Yes"
+  ],
+  "actual_yes": 374,
+  "predicted_yes": 400,
+  "TN": 882,
+  "FP": 153,
+  "FN": 127,
+  "TP": 247,
+  "yes_precision": 0.6175,
+  "yes_recall": 0.660427807486631,
+  "yes_f1": 0.6382428940568475,
+  "accuracy": 0.801277501774308,
+  "roc_auc": 0.8385982588028623
+}

@@ -1,0 +1,32 @@
+{
+  "frozen": true,
+  "frozen_at": "2026-09-28T16:08:50+02:00",
+  "threshold": 0.409,
+  "selection_reason": "No confirmed 250-person contact cap; retain the validation-set Yes F1 maximum among the evaluated 0.001-step thresholds. At 0.409 on 1127 validation customers: F1 0.674457, TP 202, FP 98, FN 97, TN 730, predicted Yes 300. Threshold 0.469 is a capacity-limited alternative only and is not the frozen final choice. Do not use final-test results to revise this choice.",
+  "features": {
+    "numeric": ["tenure", "MonthlyCharges", "TotalCharges"],
+    "categorical": ["SeniorCitizen", "gender", "Partner", "Dependents", "PhoneService", "MultipleLines", "InternetService", "OnlineSecurity", "OnlineBackup", "DeviceProtection", "TechSupport", "StreamingTV", "StreamingMovies", "Contract", "PaperlessBilling", "PaymentMethod"]
+  },
+  "preprocessing": {
+    "TotalCharges": "pd.to_numeric(errors='coerce') before splitting; no statistics learned",
+    "numeric": ["SimpleImputer(strategy='median')", "StandardScaler()"],
+    "categorical": ["OneHotEncoder(handle_unknown='ignore')"],
+    "transformer": "ColumnTransformer selecting columns by name"
+  },
+  "model_parameters": {
+    "estimator": "LogisticRegression",
+    "max_iter": 2800,
+    "solver": "lbfgs",
+    "C": 1.0,
+    "class_weight": null
+  },
+  "split": {
+    "original_train_test": "test_size=0.2, stratify=y, random_state=2002; train 5634, test 1409",
+    "development_fit_validation": "test_size=0.2 of original train, stratify=y_train, random_state=2002; fit 4507, validation 1127",
+    "final_fit_scope": "Fit the exported unfitted recipe on all 5634 original training customers only; evaluate once on the fixed 1409-person original test partition"
+  },
+  "recipe_artifact": "artifacts/pipeline-recipe.joblib",
+  "recipe_sha256": "e26cc09c15f9af99a488c4929337433bee84b5dbd6c4fe1246354685209c52af",
+  "development_checks_passed": true,
+  "original_test_previously_viewed": true
+}
